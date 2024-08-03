@@ -51,5 +51,8 @@
 		"useTabs": true,
 		"tabWidth": 4
 	},
-	"main": "index.js"
+	"main": "index.js",
+	"devDependencies": {
+		"tailwindcss": "^3.4.7"
+	}
 }
