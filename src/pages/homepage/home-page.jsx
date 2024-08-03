@@ -8,22 +8,22 @@ import {
 	faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
+import Section from "../../components/section/section";
+
 const HomePage = () => (
 	<section>
 		<div className="flex md:flex-row items-center justify-center p-4">
 			<div className="flex-2 px-[30px]">
-				<h1 className="text-5xl font-black mb-14">
-					Full-stack web and mobile app developer, and amateur
-					astronaut.
-				</h1>
-				<p className="mb-4">
-					As a React developer, I have a strong foundation in building
+				<Section
+					title="Full-stack web and mobile app developer, and amateur
+					astronaut."
+					description="As a React developer, I have a strong foundation in building
 					dynamic and responsive web applications. I enjoy utilizing
 					my skills in JavaScript, HTML5, CSS3, and various frameworks
 					to create user-friendly interfaces. I am also experienced in
 					backend development with Node.js, ensuring that my
-					applications are both scalable and secure.
-				</p>
+					applications are both scalable and secure."
+				/>
 				<div className="flex md:flex-row p-4">
 					<SocialIcon
 						url="https://github.com/shoaib-fateh"

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SocialIcon = ({ link, icon }) => (
 	<a
@@ -10,4 +10,4 @@ const SocialIcon = ({ link, icon }) => (
 	</a>
 );
 
-export default SectionIcon;
+export default SocialIcon;
