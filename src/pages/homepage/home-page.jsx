@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Section from "../../components/section/section";
-import Projects from "../../components/projects/projects";
+import ProjectSection from "../../components/project-section/project-section";
 
 const HomePage = () => (
 	<>
@@ -56,7 +56,8 @@ const HomePage = () => (
 				</div>
 			</div>
 		</section>
-		<Projects />
+
+		<ProjectSection />
 	</>
 );
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "../project/project";
 
-const Projects = () => (
+const ProjectSection = () => (
 	<div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-5">
 		<Project
 			src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png"
@@ -30,4 +30,4 @@ const Projects = () => (
 	</div>
 );
 
-export default Projects;
+export default ProjectSection;
