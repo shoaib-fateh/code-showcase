@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Section from "../../components/section/section";
 
-const AboutPage = () => (
+const ProjectsPage = () => (
 	<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
 		<section className="py-10">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -48,4 +48,4 @@ const AboutPage = () => (
 	</div>
 );
 
-export default AboutPage;
+export default ProjectsPage;
