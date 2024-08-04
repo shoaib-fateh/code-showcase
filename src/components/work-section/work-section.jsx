@@ -1,5 +1,7 @@
 import React from "react";
 import Articles from "../articles/articles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBagShopping } from "@fortawesome/free-solid-svg-icons/faBagShopping";
 
 const WorkSection = () => (
 	<div className="flex flex-col md:flex-row gap-4 py-20 px-5">
@@ -16,7 +18,13 @@ const WorkSection = () => (
 				description="AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology."
 			/>
 		</div>
-		<div></div>
+		<div>
+			<FontAwesomeIcon icon={faBagShopping} />
+			<br />
+			facebook Facebook Software Engineer 2019 - Present
+			<br />
+			twitter Twitter Software Engineer 2019 - Present
+		</div>
 	</div>
 );
 
