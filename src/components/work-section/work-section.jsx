@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons/faBagShopping";
 
 const WorkSection = () => (
-	<div className="flex flex-col md:flex-row gap-4 py-20 px-5">
+	<div className="flex flex-col md:flex-row gap-4 py-20">
 		<div className="flex flex-col gap-4 pr-10">
 			<Articles
 				to="#"

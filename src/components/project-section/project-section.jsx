@@ -2,7 +2,7 @@ import React from "react";
 import Project from "../project/project";
 
 const ProjectSection = () => (
-	<div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-5">
+	<div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-20">
 		<Project
 			src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png"
 			to="https://github.com/shoaib-fateh/herai_rafah_ict"
