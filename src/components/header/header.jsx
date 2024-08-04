@@ -98,6 +98,21 @@ const Header = () => {
 						</li>
 						<li>
 							<Link
+								to="/articles"
+								className={`block rounded md:bg-transparent ${
+									isActive("/articles")
+										? activeClass
+										: normalClass
+								}`}
+								aria-current={
+									isActive("/articles") ? "page" : undefined
+								}
+							>
+								Articles
+							</Link>
+						</li>
+						<li>
+							<Link
 								to="/services"
 								className={`block rounded md:bg-transparent ${
 									isActive("/services")
