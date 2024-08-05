@@ -9,6 +9,7 @@ import ProjectsPage from "./pages/projects-page/projects-page";
 import ArticlesPage from "./pages/articles-page/articles-page";
 import ArticlePage from "./pages/article-page/article-page";
 import ContactPage from "./pages/contact-page/contact-page";
+import _404Page from "./pages/404-page/404-page";
 
 const App = () => {
 	return (
@@ -25,6 +26,7 @@ const App = () => {
 						element={<ArticlePage />}
 					/>
 					<Route path="/contact" element={<ContactPage />} />
+					<Route path="*" element={<_404Page />} />
 				</Routes>
 				<Footer />
 			</div>
