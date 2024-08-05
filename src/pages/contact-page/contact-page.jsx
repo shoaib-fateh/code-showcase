@@ -1,8 +1,20 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Section from "../../components/section/section";
 
 const ContactPage = () => (
 	<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+		<Helmet>
+			<title>Contact - Fateh's Portfolio</title>
+			<meta
+				name="description"
+				content="Get in touch with Fateh. Find ways to contact, including email and social media, for feedback, questions, or suggestions."
+			/>
+			<meta
+				name="keywords"
+				content="Fateh, contact, email, social media, feedback, questions, suggestions, ReactJS, NodeJS, web development"
+			/>
+		</Helmet>
 		<section className="py-10">
 			<div className="grid grid-cols-2 gap-6 items-center">
 				<div className="col-span-2 items-center md:items-start">
@@ -12,8 +24,14 @@ const ContactPage = () => (
 					/>
 					<p>
 						If you have a specific question or comment, please feel
-						free to email me directly at shoaibfateh21@yahoo.com. I
-						strive to respond to all messages within 24 hours,
+						free to email me directly at{" "}
+						<a
+							href="mailto:shoaibfateh21@yahoo.com"
+							className="text-blue-500 hover:underline"
+						>
+							shoaibfateh21@yahoo.com
+						</a>
+						. I strive to respond to all messages within 24 hours,
 						though it may take a bit longer during busy periods. You
 						can also reach me through the contact form on my
 						website. Simply fill out the required fields, and I'll

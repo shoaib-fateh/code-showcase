@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import SocialIcon from "../../components/social-icon/social-icon";
 import {
 	faGithub,
@@ -10,6 +11,18 @@ import Section from "../../components/section/section";
 
 const ProjectsPage = () => (
 	<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+		<Helmet>
+			<title>Projects - Fateh's Portfolio</title>
+			<meta
+				name="description"
+				content="Discover Fateh's innovative projects in ReactJS, NodeJS, and web development. Explore open-source contributions and more."
+			/>
+			<meta
+				name="keywords"
+				content="Fateh, ReactJS projects, NodeJS projects, web development, open-source, programming, freelance"
+			/>
+		</Helmet>
+		
 		<section className="py-10">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
 				<div className="flex flex-col items-center md:items-start">

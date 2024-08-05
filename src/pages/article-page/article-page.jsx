@@ -1,5 +1,5 @@
-// ArticlePage.js
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { ARTICLES_DATA } from "../../data/ARTICLES_DATA";
 import { slugify } from "../../utils/slugify";
@@ -10,6 +10,29 @@ const ArticlePage = () => {
 
 	return (
 		<div className="container mx-auto p-6 dark:bg-gray-900 py-[100px]">
+			<Helmet>
+				<title>
+					{article ? article.title : "Article Not Found"} - Fateh's
+					Portfolio
+				</title>
+				<meta
+					name="description"
+					content={
+						article
+							? article.content.substring(0, 150)
+							: "Article not found"
+					}
+				/>
+				<meta
+					name="keywords"
+					content={
+						article
+							? article.title.split(" ").join(", ") +
+							  ", ReactJS, NodeJS, web development, programming"
+							: "article, not found, ReactJS, NodeJS"
+					}
+				/>
+			</Helmet>
 			{article ? (
 				<div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
 					<h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
