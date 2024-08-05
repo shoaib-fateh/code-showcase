@@ -2,11 +2,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { ARTICLES_DATA } from "../../data/ARTICLES_DATA";
+import { slugify } from "../../utils/slugify";
 
 const ArticlePage = () => {
 	const { articleId } = useParams();
-	// Ensure articleId is a string
-	const article = ARTICLES_DATA.find((a) => a.title === String(articleId));
+	const article = ARTICLES_DATA.find((a) => slugify(a.title) === articleId);
 
 	return (
 		<div className="container mx-auto p-6 dark:bg-gray-900 py-[100px]">
