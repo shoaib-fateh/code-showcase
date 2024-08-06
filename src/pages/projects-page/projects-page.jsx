@@ -2,9 +2,11 @@ import React from "react";
 import Section from "../../components/section/section";
 import ProjectSection from "../../components/project-section/project-section";
 import { Helmet } from "react-helmet";
+import DivPad from "../../components/div-pad/div-pad";
 
 const ArticlesPage = () => (
-	<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+	<>
+		<DivPad />
 		<Helmet>
 			<title>Projects - Fateh's Portfolio</title>
 			<meta
@@ -28,7 +30,7 @@ const ArticlesPage = () => (
 			</div>
 			<ProjectSection />
 		</section>
-	</div>
+	</>
 );
 
 export default ArticlesPage;

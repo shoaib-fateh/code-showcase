@@ -10,7 +10,7 @@ import Section from "../../components/section/section";
 
 const HeroSection = () => (
 	<section>
-		<div className="flex flex-col md:flex-row items-center justify-center py-10">
+		<div className="flex flex-col md:flex-row items-center justify-center pb-10">
 			<div className="flex-2 px-4 md:px-8">
 				<Section
 					title="Full-stack web and mobile app developer, and amateur astronaut."

@@ -14,7 +14,7 @@ import _404Page from "./pages/404-page/404-page";
 const App = () => {
 	return (
 		<Router>
-			<div className="container mx-auto">
+			<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
 				<Header />
 				<Routes>
 					<Route path="/" element={<HomePage />} />

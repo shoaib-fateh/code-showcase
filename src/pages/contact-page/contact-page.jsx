@@ -1,9 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Section from "../../components/section/section";
+import DivPad from "../../components/div-pad/div-pad";
 
 const ContactPage = () => (
-	<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+	<>
+		<DivPad />
 		<Helmet>
 			<title>Contact - Fateh's Portfolio</title>
 			<meta
@@ -45,7 +47,7 @@ const ContactPage = () => (
 				<div className="flex justify-center"></div>
 			</div>
 		</section>
-	</div>
+	</>
 );
 
 export default ContactPage;

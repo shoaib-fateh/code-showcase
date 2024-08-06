@@ -8,9 +8,11 @@ import {
 	faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import Section from "../../components/section/section";
+import DivPad from "../../components/div-pad/div-pad";
 
 const ProjectsPage = () => (
-	<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+	<>
+		<DivPad />
 		<Helmet>
 			<title>Projects - Fateh's Portfolio</title>
 			<meta
@@ -22,7 +24,7 @@ const ProjectsPage = () => (
 				content="Fateh, ReactJS projects, NodeJS projects, web development, open-source, programming, freelance"
 			/>
 		</Helmet>
-		
+
 		<section className="py-10">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
 				<div className="flex flex-col items-center md:items-start">
@@ -58,7 +60,7 @@ const ProjectsPage = () => (
 				</div>
 			</div>
 		</section>
-	</div>
+	</>
 );
 
 export default ProjectsPage;

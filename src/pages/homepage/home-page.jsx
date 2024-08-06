@@ -3,9 +3,11 @@ import { Helmet } from "react-helmet";
 import HeroSection from "../../components/hero-section/hero-section";
 import ProjectSection from "../../components/project-section/project-section";
 import WorkSection from "../../components/work-section/work-section";
+import DivPad from "../../components/div-pad/div-pad";
 
 const HomePage = () => (
-	<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+	<>
+		<DivPad />
 		<Helmet>
 			<title>Home - Fateh's Portfolio</title>
 			<meta
@@ -20,7 +22,7 @@ const HomePage = () => (
 		<HeroSection />
 		<ProjectSection />
 		<WorkSection />
-	</div>
+	</>
 );
 
 export default HomePage;
