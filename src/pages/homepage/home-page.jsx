@@ -5,6 +5,7 @@ import ProjectSection from "../../components/project-section/project-section";
 import WorkSection from "../../components/work-section/work-section";
 import DivPad from "../../components/div-pad/div-pad";
 import Logo from "../../components/logo/logo";
+import { debounce } from "lodash";
 
 const HomePage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -16,9 +17,8 @@ const HomePage = () => {
 	}, []);
 
 	useEffect(() => {
-		const handleScroll = () => {
+		const handleScroll = debounce(() => {
 			let scroll = Math.round(window.pageYOffset, 2);
-
 			let newLogoSize = 120 - (scroll * 4) / 10;
 
 			if (newLogoSize < oldLogoSize) {
@@ -33,21 +33,17 @@ const HomePage = () => {
 				setLogoSize(newLogoSize);
 				setStayLogo(false);
 			}
-		};
+		}, 50);
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [logoSize, oldLogoSize]);
 
-	const logoStyle = {
-		display: "flex",
-		position: stayLogo ? "fixed" : "relative",
-		top: stayLogo ? "3vh" : "auto",
-		zIndex: 999,
-		border: stayLogo ? "1px solid white" : "none",
-		borderRadius: stayLogo ? "50%" : "none",
-		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
-	};
+	const logoClass = `ml-5 ${
+		stayLogo
+			? "fixed top-3 z-50 border border-white rounded-full shadow-lg"
+			: "relative"
+	}`;
 
 	return (
 		<>
@@ -63,7 +59,7 @@ const HomePage = () => {
 					content="Fateh, ReactJS, NodeJS, web development, graphic design, portfolio, freelance developer, front-end development"
 				/>
 			</Helmet>
-			<div style={logoStyle} className="ml-5">
+			<div className={logoClass}>
 				<Logo width={logoSize} link={false} />
 			</div>
 			<div className="pb-10" />

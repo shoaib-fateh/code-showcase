@@ -5,7 +5,6 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Spinner from "./components/spinner/spinner";
 
-// Lazy load components
 const HomePage = lazy(() => import("./pages/homepage/home-page"));
 const AboutPage = lazy(() => import("./pages/about-page/about-page"));
 const ProjectsPage = lazy(() => import("./pages/projects-page/projects-page"));

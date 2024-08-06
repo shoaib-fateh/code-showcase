@@ -6,7 +6,7 @@ const Project = ({ to, src, title, description }) => (
 		class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:cursor-pointer"
 		target="_blank"
 	>
-		<img src={src} className="w-10 mb-3" />
+		<img src={src} width="" height="" className="w-10 mb-3" />
 		<a href={to}>
 			<h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
 				{title}
