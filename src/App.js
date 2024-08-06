@@ -11,7 +11,7 @@ const ProjectsPage = lazy(() => import("./pages/projects-page/projects-page"));
 const ArticlesPage = lazy(() => import("./pages/articles-page/articles-page"));
 const ArticlePage = lazy(() => import("./pages/article-page/article-page"));
 const ContactPage = lazy(() => import("./pages/contact-page/contact-page"));
-const _404Page = lazy(() => import("./pages/404-page/404-page"));
+const NotFoundPage  = lazy(() => import("./pages/404-page/404-page"));
 
 const App = () => {
 	return (
@@ -26,7 +26,7 @@ const App = () => {
 						<Route path="/articles" element={<ArticlesPage />} />
 						<Route path="/articles/:articleId" element={<ArticlePage />} />
 						<Route path="/contact" element={<ContactPage />} />
-						<Route path="*" element={<_404Page />} />
+						<Route path="*" element={<NotFoundPage  />} />
 					</Routes>
 				</Suspense>
 				<Footer />
