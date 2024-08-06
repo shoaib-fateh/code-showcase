@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const _404Page = () => (
+const NotFoundPage  = () => (
 	<div className="flex flex-col items-center justify-center min-h-screen text-gray-800 p-8">
 		<div className="p-8 text-center">
 			<h1 className="text-5xl font-extrabold text-dodgerblue mb-4">
@@ -47,4 +47,4 @@ const _404Page = () => (
 	</div>
 );
 
-export default _404Page;
+export default NotFoundPage ;
