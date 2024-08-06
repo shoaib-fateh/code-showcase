@@ -1,33 +1,38 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import HomePage from "./pages/homepage/home-page";
-import AboutPage from "./pages/about-page/about-page";
-import ProjectsPage from "./pages/projects-page/projects-page";
-import ArticlesPage from "./pages/articles-page/articles-page";
-import ArticlePage from "./pages/article-page/article-page";
-import ContactPage from "./pages/contact-page/contact-page";
-import _404Page from "./pages/404-page/404-page";
+import Spinner from "./components/spinner/spinner";
+
+// Lazy load components
+const HomePage = lazy(() => import("./pages/homepage/home-page"));
+const AboutPage = lazy(() => import("./pages/about-page/about-page"));
+const ProjectsPage = lazy(() => import("./pages/projects-page/projects-page"));
+const ArticlesPage = lazy(() => import("./pages/articles-page/articles-page"));
+const ArticlePage = lazy(() => import("./pages/article-page/article-page"));
+const ContactPage = lazy(() => import("./pages/contact-page/contact-page"));
+const _404Page = lazy(() => import("./pages/404-page/404-page"));
 
 const App = () => {
 	return (
 		<Router>
 			<div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
 				<Header />
-				<Routes>
-					<Route path="/" element={<HomePage />} />
-					<Route path="/about" element={<AboutPage />} />
-					<Route path="/projects" element={<ProjectsPage />} />
-					<Route path="/articles" element={<ArticlesPage />} />
-					<Route
-						path="/articles/:articleId"
-						element={<ArticlePage />}
-					/>
-					<Route path="/contact" element={<ContactPage />} />
-					<Route path="*" element={<_404Page />} />
-				</Routes>
+				<Suspense fallback={<Spinner />}>
+					<Routes>
+						<Route path="/" element={<HomePage />} />
+						<Route path="/about" element={<AboutPage />} />
+						<Route path="/projects" element={<ProjectsPage />} />
+						<Route path="/articles" element={<ArticlesPage />} />
+						<Route
+							path="/articles/:articleId"
+							element={<ArticlePage />}
+						/>
+						<Route path="/contact" element={<ContactPage />} />
+						<Route path="*" element={<_404Page />} />
+					</Routes>
+				</Suspense>
 				<Footer />
 			</div>
 		</Router>
